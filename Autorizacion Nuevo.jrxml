@@ -13,9 +13,8 @@
 	<parameter name="cilindraje" class="java.lang.String"/>
 	<parameter name="valor_cancelar" class="java.lang.String"/>
 	<parameter name="numero_identificacion" class="java.lang.String"/>
-	<parameter name="identificacionCedente" class="java.lang.String"/>
 	<parameter name="ciudad" class="java.lang.String"/>
-	<parameter name="nombreCesionario" class="java.lang.String"/>
+	<parameter name="nombre_concesionario" class="java.lang.String"/>
 	<query language="sql"><![CDATA[]]></query>
 	<background splitType="Stretch"/>
 	<detail>
@@ -133,7 +132,7 @@
 				<expression><![CDATA["El valor a por cancelar al concesionario por el vehiculo es <b>USD$ " + $P{valor_cancelar} + "</b>. Para el pago de la cartera deben enviar los documentos originales a las oficinas de Novacredit"]]></expression>
 			</element>
 			<element kind="textField" uuid="a8bababb-c6f6-48a3-bda2-d21336aa88ed" x="0" y="93" width="450" height="20" fontSize="12.0" textAdjust="StretchHeight" vTextAlign="Top">
-				<expression><![CDATA[$P{nombreCesionario}]]></expression>
+				<expression><![CDATA[$P{nombre_concesionario}]]></expression>
 			</element>
 			<element kind="textField" uuid="04ddb935-111f-4ed0-9a3a-1f00208def6f" x="0" y="0" width="515" height="30">
 				<expression><![CDATA[$P{ciudad} + " " 
