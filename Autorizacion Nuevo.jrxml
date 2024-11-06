@@ -1,0 +1,214 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="cesionesUno" language="java" pageWidth="595" pageHeight="842" columnWidth="525" leftMargin="50" rightMargin="20" topMargin="20" bottomMargin="20" uuid="586ce6c9-66a0-4368-9a2f-bda9835132e4" summaryNewPage="true">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nombre_ciudad" class="java.lang.String"/>
+	<parameter name="marca" class="java.lang.String"/>
+	<parameter name="nombre_titular" class="java.lang.String"/>
+	<parameter name="modelo" class="java.lang.String"/>
+	<parameter name="color" class="java.lang.String"/>
+	<parameter name="motor" class="java.lang.String"/>
+	<parameter name="chasis" class="java.lang.String"/>
+	<parameter name="anio" class="java.lang.String"/>
+	<parameter name="cpn" class="java.lang.String"/>
+	<parameter name="cilindraje" class="java.lang.String"/>
+	<parameter name="valor_cancelar" class="java.lang.String"/>
+	<parameter name="numero_identificacion" class="java.lang.String"/>
+	<parameter name="identificacionCedente" class="java.lang.String"/>
+	<parameter name="ciudad" class="java.lang.String"/>
+	<parameter name="nombreCesionario" class="java.lang.String"/>
+	<query language="sql"><![CDATA[]]></query>
+	<background splitType="Stretch"/>
+	<detail>
+		<band height="802">
+			<element kind="staticText" uuid="7c972ffa-9e3a-434f-b239-c5e441a4f68a" x="105" y="40" width="285" height="20" fontSize="12.0" bold="true" hTextAlign="Center">
+				<text><![CDATA[AUTORIZACIÓN DE SALIDA DEL VEHÍCULO]]></text>
+			</element>
+			<element kind="staticText" uuid="55ed439a-949e-48a4-bb26-377a8c34c5eb" x="0" y="70" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[Señores,]]></text>
+			</element>
+			<element kind="textField" uuid="2fe61e8a-727a-4d37-a65f-6a757ad383c8" x="0" y="111" width="418" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[$P{nombre_ciudad}]]></expression>
+			</element>
+			<element kind="staticText" uuid="34e5d778-2871-4cc4-b493-29ebb0f9647a" x="155" y="190" width="141" height="20" fontSize="12.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+				<text><![CDATA[DATOS VEHÍCULO]]></text>
+			</element>
+			<element kind="textField" uuid="d211dc20-c116-4a89-a3bb-58d740f0773e" x="0" y="140" width="490" height="20" markup="html" fontSize="12.0" textAdjust="StretchHeight" vTextAlign="Middle">
+				<expression><![CDATA["Por medio del presente, se autoriza la salida del vehículo al Señor/a: <b>" + $P{nombre_titular} + "</b> con cédula de ciudadanía <b>N° " + $P{numero_identificacion} + "</b> con las siguientes características:"
+]]></expression>
+			</element>
+			<element kind="staticText" uuid="65cea64e-9e7e-473f-a8c4-651976d8a753" x="50" y="240" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ MODELO:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="4758795a-3621-4443-9a95-5e4d939c99ff" x="150" y="240" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{modelo}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="83bef228-7594-4ef3-b8cd-455a2e3a0069" x="50" y="300" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ COLOR:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="56d56a24-7887-4316-bebe-8ff19b4165dd" x="150" y="300" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{color}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="81fc0153-cd37-4ff2-bc21-3e2801c91bde" x="50" y="260" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ MOTOR:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="ba4c5a1f-fe7f-4aba-b860-d0d3a985f3c4" x="150" y="260" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{motor}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="46363539-7829-4e89-9645-c90149e93c57" x="50" y="280" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ CHASIS SERIE:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="0d902350-289e-40f1-ba3f-f4e25f6dfeab" x="150" y="280" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{chasis}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="9789fe60-5e1b-4ebe-8810-a3914d09d835" x="50" y="320" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ AÑO:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="4c80be74-c706-4c83-b941-b7c0ae8c1a80" x="150" y="320" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{anio}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="ef34dceb-c060-4944-a18e-887d78f45408" x="0" y="440" width="100" height="20" fontSize="10.0" vTextAlign="Middle">
+				<text><![CDATA[Atentamente,]]></text>
+			</element>
+			<element kind="textField" uuid="7bec3021-cde6-4c6a-b0ef-e35afdb97051" x="0" y="410" width="490" height="20" markup="html" fontSize="10.0" textAdjust="StretchHeight" vTextAlign="Middle">
+				<expression><![CDATA["El valor a por cancelar al concesionario por el vehiculo es <b>USD$ " + $P{valor_cancelar} + "</b>. Para el pago de la cartera deben enviar los documentos originales a las oficinas de Novacredit"]]></expression>
+			</element>
+			<element kind="textField" uuid="a8bababb-c6f6-48a3-bda2-d21336aa88ed" x="0" y="93" width="450" height="20" fontSize="12.0" textAdjust="StretchHeight" vTextAlign="Top">
+				<expression><![CDATA[$P{nombreCesionario}]]></expression>
+			</element>
+			<element kind="textField" uuid="04ddb935-111f-4ed0-9a3a-1f00208def6f" x="0" y="0" width="515" height="30">
+				<expression><![CDATA[$P{ciudad} + " " 
++ new java.text.SimpleDateFormat("d").format(new java.util.Date()) 
++ (new java.text.SimpleDateFormat("d").format(new java.util.Date()).equals("1") ? " día del mes de " : " días del mes de ")
++ new java.text.SimpleDateFormat("MMMM").format(new java.util.Date()).substring(0, 1).toUpperCase() 
++ new java.text.SimpleDateFormat("MMMM").format(new java.util.Date()).substring(1) 
++ " del " 
++ new java.text.SimpleDateFormat("yyyy").format(new java.util.Date())
+]]></expression>
+			</element>
+			<element kind="staticText" uuid="c0cf1e96-7b87-447f-8898-9e02c1ea93bd" x="50" y="220" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ MARCA:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="7fb96aa0-07a9-4147-afc8-c9861e980dc4" x="150" y="220" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{marca}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="c0495b2d-d1d9-46a4-9c3c-7803fd51ebd7" x="50" y="340" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ CPN RAMV:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="242b1348-accc-476c-8d6b-d6d619816314" x="150" y="340" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{cpn}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="50bb03ce-5442-4c99-9f6a-42b13592971a" x="50" y="360" width="100" height="20" fontSize="12.0" hTextAlign="Left" vTextAlign="Middle">
+				<text><![CDATA[ CILINDRAJE:]]></text>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="f57f8ca3-fa3e-43da-a6d1-a73da97ffece" x="150" y="360" width="318" height="20" fontSize="12.0" vTextAlign="Middle">
+				<expression><![CDATA[" "+$P{cilindraje}]]></expression>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+			</element>
+			<element kind="staticText" uuid="8f77b07b-b54d-4131-9096-67c89c84dd00" x="0" y="510" width="100" height="20" fontSize="10.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Riesgos,]]></text>
+			</element>
+			<element kind="staticText" uuid="7ca9abd8-bf71-4115-8be4-c705023d9b9b" x="1" y="530" width="100" height="20" fontSize="10.0" bold="true" vTextAlign="Middle">
+				<text><![CDATA[Novacredit S.A.]]></text>
+			</element>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+		<band height="787">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</detail>
+</jasperReport>
