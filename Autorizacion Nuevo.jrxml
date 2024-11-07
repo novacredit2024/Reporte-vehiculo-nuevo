@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 5.1.0  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="autorizacion_nuevo" pageWidth="595" pageHeight="842" columnWidth="525" leftMargin="50" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="cf8dc84d-3e72-45cf-a5c6-a860a39fa590">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 5.1.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_vehiculos_nuevos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a7c75f09-fdf2-4c91-a33b-c55bbdbf5086">
 	<parameter name="nombre_ciudad" class="java.lang.String"/>
 	<parameter name="marca" class="java.lang.String"/>
 	<parameter name="nombre_titular" class="java.lang.String"/>
@@ -19,46 +18,59 @@
 	<background>
 		<band splitType="Stretch"/>
 	</background>
+	<title>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="29" y="39" width="515" height="30" uuid="59a3a616-195c-460e-b37c-c56b425d4cc3"/>
+				<textFieldExpression><![CDATA[$P{ciudad} + " " 
++ new java.text.SimpleDateFormat("d").format(new java.util.Date()) 
++ (new java.text.SimpleDateFormat("d").format(new java.util.Date()).equals("1") ? " día del mes de " : " días del mes de ")
++ new java.text.SimpleDateFormat("MMMM").format(new java.util.Date()).substring(0, 1).toUpperCase() 
++ new java.text.SimpleDateFormat("MMMM").format(new java.util.Date()).substring(1) 
++ " del " 
++ new java.text.SimpleDateFormat("yyyy").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
 	<detail>
-		<band height="802">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		<band height="550" splitType="Stretch">
 			<staticText>
-				<reportElement x="105" y="40" width="285" height="20" uuid="7c972ffa-9e3a-434f-b239-c5e441a4f68a"/>
+				<reportElement x="137" y="14" width="285" height="20" uuid="b7efa6a4-4355-4444-abb6-943c2728e8f8"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[AUTORIZACIÓN DE SALIDA DEL VEHÍCULO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="70" width="100" height="20" uuid="55ed439a-949e-48a4-bb26-377a8c34c5eb"/>
+				<reportElement x="32" y="49" width="100" height="20" uuid="36167f9c-435a-4af5-b3b6-1833b3a27210"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Señores,]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="0" y="111" width="418" height="20" uuid="2fe61e8a-727a-4d37-a65f-6a757ad383c8"/>
+				<reportElement x="32" y="100" width="418" height="20" uuid="b34d13b1-4a6d-4c28-9807-c55e17c89c88"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{nombre_ciudad}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="155" y="190" width="141" height="20" uuid="34e5d778-2871-4cc4-b493-29ebb0f9647a"/>
+				<reportElement x="187" y="190" width="141" height="20" uuid="fa024e3e-dccb-44ce-8668-5f25c573086f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[DATOS VEHÍCULO]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="140" width="490" height="20" uuid="d211dc20-c116-4a89-a3bb-58d740f0773e"/>
+				<reportElement x="32" y="129" width="490" height="20" uuid="0971c7e1-d957-4d7d-a198-73979235fb9e"/>
 				<textElement verticalAlignment="Middle" markup="html">
 					<font size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Por medio del presente, se autoriza la salida del vehículo al Señor/a: <b>" + $P{nombre_titular} + "</b> con cédula de ciudadanía <b>N° " + $P{numero_identificacion} + "</b> con las siguientes características:"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="240" width="100" height="20" uuid="65cea64e-9e7e-473f-a8c4-651976d8a753"/>
+				<reportElement x="82" y="240" width="100" height="20" uuid="db1cb207-44a8-4b53-89c8-5d7a4808782c"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -71,7 +83,7 @@
 				<text><![CDATA[ MODELO:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="240" width="318" height="20" uuid="4758795a-3621-4443-9a95-5e4d939c99ff"/>
+				<reportElement x="182" y="240" width="318" height="20" uuid="f6fc37cb-9aa3-4afc-82e4-e19088170775"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -84,7 +96,7 @@
 				<textFieldExpression><![CDATA[" "+$P{modelo}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="300" width="100" height="20" uuid="83bef228-7594-4ef3-b8cd-455a2e3a0069"/>
+				<reportElement x="82" y="300" width="100" height="20" uuid="b2091204-ca79-4db9-a191-f78f7a841a91"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -97,7 +109,7 @@
 				<text><![CDATA[ COLOR:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="300" width="318" height="20" uuid="56d56a24-7887-4316-bebe-8ff19b4165dd"/>
+				<reportElement x="182" y="300" width="318" height="20" uuid="4100d9a0-bc74-485d-8e93-356627ead8ae"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -110,7 +122,7 @@
 				<textFieldExpression><![CDATA[" "+$P{color}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="260" width="100" height="20" uuid="81fc0153-cd37-4ff2-bc21-3e2801c91bde"/>
+				<reportElement x="82" y="260" width="100" height="20" uuid="d2368696-c5b0-4274-a282-e9a7dac50240"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -123,7 +135,7 @@
 				<text><![CDATA[ MOTOR:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="260" width="318" height="20" uuid="ba4c5a1f-fe7f-4aba-b860-d0d3a985f3c4"/>
+				<reportElement x="182" y="260" width="318" height="20" uuid="4a59a17c-10d4-4fbc-91e8-af5f91cd54ca"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -136,7 +148,7 @@
 				<textFieldExpression><![CDATA[" "+$P{motor}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="280" width="100" height="20" uuid="46363539-7829-4e89-9645-c90149e93c57"/>
+				<reportElement x="82" y="280" width="100" height="20" uuid="2fad0722-800e-4b89-94f8-806c846b68a3"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -149,7 +161,7 @@
 				<text><![CDATA[ CHASIS SERIE:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="280" width="318" height="20" uuid="0d902350-289e-40f1-ba3f-f4e25f6dfeab"/>
+				<reportElement x="182" y="280" width="318" height="20" uuid="89adc218-b9cd-4778-9cc8-dc0da40e0403"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -162,7 +174,7 @@
 				<textFieldExpression><![CDATA[" "+$P{chasis}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="320" width="100" height="20" uuid="9789fe60-5e1b-4ebe-8810-a3914d09d835"/>
+				<reportElement x="82" y="320" width="100" height="20" uuid="fd198a78-3bb1-4e6b-bfa7-99de29d5a8a3"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -175,7 +187,7 @@
 				<text><![CDATA[ AÑO:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="320" width="318" height="20" uuid="4c80be74-c706-4c83-b941-b7c0ae8c1a80"/>
+				<reportElement x="182" y="320" width="318" height="20" uuid="3044f9fb-a4ec-4633-91a7-d22d3ac26e24"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -187,39 +199,15 @@
 				</textElement>
 				<textFieldExpression><![CDATA[" "+$P{anio}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="0" y="440" width="100" height="20" uuid="ef34dceb-c060-4944-a18e-887d78f45408"/>
-				<textElement verticalAlignment="Middle">
-					<font size="10"/>
-				</textElement>
-				<text><![CDATA[Atentamente,]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="410" width="490" height="20" uuid="7bec3021-cde6-4c6a-b0ef-e35afdb97051"/>
-				<textElement verticalAlignment="Middle" markup="html">
-					<font size="10"/>
-				</textElement>
-				<textFieldExpression><![CDATA["El valor a por cancelar al concesionario por el vehiculo es <b>USD$ " + $P{valor_cancelar} + "</b>. Para el pago de la cartera deben enviar los documentos originales a las oficinas de Novacredit"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="0" y="93" width="450" height="20" uuid="a8bababb-c6f6-48a3-bda2-d21336aa88ed"/>
+				<reportElement x="32" y="75" width="450" height="20" uuid="56eb8200-ba95-48be-b10f-062a50467fca"/>
 				<textElement verticalAlignment="Top">
 					<font size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{nombre_concesionario}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="0" y="0" width="515" height="30" uuid="04ddb935-111f-4ed0-9a3a-1f00208def6f"/>
-				<textFieldExpression><![CDATA[$P{ciudad} + " " 
-+ new java.text.SimpleDateFormat("d").format(new java.util.Date()) 
-+ (new java.text.SimpleDateFormat("d").format(new java.util.Date()).equals("1") ? " día del mes de " : " días del mes de ")
-+ new java.text.SimpleDateFormat("MMMM").format(new java.util.Date()).substring(0, 1).toUpperCase() 
-+ new java.text.SimpleDateFormat("MMMM").format(new java.util.Date()).substring(1) 
-+ " del " 
-+ new java.text.SimpleDateFormat("yyyy").format(new java.util.Date())]]></textFieldExpression>
-			</textField>
 			<staticText>
-				<reportElement x="50" y="220" width="100" height="20" uuid="c0cf1e96-7b87-447f-8898-9e02c1ea93bd"/>
+				<reportElement x="82" y="220" width="100" height="20" uuid="184c075c-ae1e-49b3-875c-3b7a82fe97a6"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -232,7 +220,7 @@
 				<text><![CDATA[ MARCA:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="220" width="318" height="20" uuid="7fb96aa0-07a9-4147-afc8-c9861e980dc4"/>
+				<reportElement x="182" y="220" width="318" height="20" uuid="0ca58f26-0cd4-4387-9d11-c93ab2d164ac"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -245,7 +233,7 @@
 				<textFieldExpression><![CDATA[" "+$P{marca}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="340" width="100" height="20" uuid="c0495b2d-d1d9-46a4-9c3c-7803fd51ebd7"/>
+				<reportElement x="82" y="340" width="100" height="20" uuid="faa54710-c34f-4340-a8a7-59ac0ffdc7f4"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -258,7 +246,20 @@
 				<text><![CDATA[ CPN RAMV:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="150" y="340" width="318" height="20" uuid="242b1348-accc-476c-8d6b-d6d619816314"/>
+				<reportElement x="182" y="360" width="318" height="20" uuid="716b0b08-8bcc-4e85-9afc-7300c0c424e1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$P{cilindraje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="340" width="318" height="20" uuid="59a93a7e-011f-42b8-9227-7298c37c10a8"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -271,7 +272,7 @@
 				<textFieldExpression><![CDATA[" "+$P{cpn}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="50" y="360" width="100" height="20" uuid="50bb03ce-5442-4c99-9f6a-42b13592971a"/>
+				<reportElement x="82" y="360" width="100" height="20" uuid="3835cd59-1d15-43d0-ad9d-747ffbaed56f"/>
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
@@ -283,28 +284,29 @@
 				</textElement>
 				<text><![CDATA[ CILINDRAJE:]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="150" y="360" width="318" height="20" uuid="f57f8ca3-fa3e-43da-a6d1-a73da97ffece"/>
-				<box>
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement verticalAlignment="Middle">
-					<font size="12"/>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="32" y="410" width="490" height="20" uuid="ebdec629-cdce-43ef-ae0d-e2c233105b73"/>
+				<textElement verticalAlignment="Middle" markup="html">
+					<font size="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA[" "+$P{cilindraje}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["El valor a por cancelar al concesionario por el vehiculo es <b>USD$ " + $P{valor_cancelar} + "</b>. Para el pago de la cartera deben enviar los documentos originales a las oficinas de Novacredit"]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="510" width="100" height="20" uuid="8f77b07b-b54d-4131-9096-67c89c84dd00"/>
+				<reportElement x="32" y="440" width="100" height="20" uuid="b854446c-5f6a-46a5-8ae3-18073a51ed23"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Atentamente,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="510" width="100" height="20" uuid="b6497071-43d2-4fc0-ba8c-de31ef07313a"/>
 				<textElement verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Riesgos,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1" y="530" width="100" height="20" uuid="7ca9abd8-bf71-4115-8be4-c705023d9b9b"/>
+				<reportElement x="33" y="530" width="100" height="20" uuid="23ecd7f8-21f3-4458-9368-ed7715f19b75"/>
 				<textElement verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
@@ -312,4 +314,7 @@
 			</staticText>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
 </jasperReport>
