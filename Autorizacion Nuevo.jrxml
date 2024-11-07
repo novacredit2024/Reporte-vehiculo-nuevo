@@ -311,8 +311,5 @@
 				<text><![CDATA[Novacredit S.A.]]></text>
 			</staticText>
 		</band>
-		<band height="787">
-			<property name="com.jaspersoft.studio.unit.height" value="px"/>
-		</band>
 	</detail>
 </jasperReport>
